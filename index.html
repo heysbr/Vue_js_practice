@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Hello world
-</body>
+  </head>
+
+  <style>
+    #app {
+      display: inline-block;
+      padding: 10px;
+      font-size: x-large;
+      background-color: lightgreen;
+    }
+  </style>
+  <body>
+    <h1>Vue JS Practice</h1>
+    <p>
+      This project is created for practicing Vue js. <br />
+      I will post all the learning task that i perform for learning Vue js.
+    </p>
+
+    <div id="app">{{ message }}</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "Hello! I am Priyanshu Sabaar",
+          };
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
 </html>
